@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+		<meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+	<title>JS | Assignments</title>
+	 <style>
+	 body{
+	 	background: #f3f3f3;
+	 }
+	 	*{
+	 		margin: 0;
+	 		padding: 0;
+	 		box-sizing: border-box;
+	 	}
+	 	.formArea{
+	 		width: 400px;
+	 		margin:auto;
+	 		background: #fff;
+	 		padding:50px 40px;
+	 		min-height: 500px;
+	 		margin-top: 50px;
+	 		box-shadow: 0px 0px 10px #ccc;
+	 	}
+	 	.formArea input{
+	 		    background-color: transparent;
+    border: none;
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    margin: 0;
+    width: 80%;
+    outline: none;
+    padding: 10px 0;
+    z-index: 0;
+    border-bottom: 1px solid #999;
+	 	}
+	 	.form-group{
+	 		padding: 10px 0;
+	 		display: inline-block;
+	 		width: 48%;
+	 	}
+	 	.formArea input:focus{
+	 		border-bottom: 2px solid #4285f4;
+	 	}
+	 	.SubmitBtn{
+	 		background: #4285f4;
+   			color: #fff;
+   			padding: 10px;
+   			float: right;
+   			border:none;
+   			border-radius: 4px;
+   			margin-top: 10px;
+	 	}
+	 </style>
+	 	
+
+</head>
+<body>
+	
+	<div class="formArea">
+		<form name="myform" method="post" action="">
+			<div class="form-group">
+				<input type="text" name="email" onkeyup="update()" placeholder="Please Inter Email">
+			</div>
+			
+			 <div id="fieldValue"></div>
+		</form>
+	</div>
+	
+	<script>
+
+		var myform = document.getElementsByName('myform')[0];
+
+		function update(){
+
+			fieldValue.innerHTML = document.myform.email.value;
+
+		}
+		 
+	</script> 
+		}
+	 
+	 
+</body>

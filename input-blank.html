@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+		<meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+	<title>JS | Assignments</title>
+	 <style>
+	 body{
+	 	background: #f3f3f3;
+	 }
+	 	*{
+	 		margin: 0;
+	 		padding: 0;
+	 		box-sizing: border-box;
+	 	}
+	 	.formArea{
+	 		width: 400px;
+	 		margin:auto;
+	 		background: #fff;
+	 		padding:50px 40px;
+	 		min-height: 500px;
+	 		margin-top: 50px;
+	 		box-shadow: 0px 0px 10px #ccc;
+	 	}
+	 	.formArea input{
+	 		    background-color: transparent;
+    border: none;
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    margin: 0;
+    min-width: 100%;
+    outline: none;
+    padding: 10px 0;
+    z-index: 0;
+    border-bottom: 1px solid #999;
+	 	}
+	 	.formArea input:focus{
+	 		border-bottom: 2px solid #4285f4;
+	 	}
+	 	.SubmitBtn{
+	 		background: #4285f4;
+   			color: #fff;
+   			padding: 10px;
+   			float: right;
+   			border:none;
+   			border-radius: 4px;
+   			margin-top: 10px;
+	 	}
+	 </style>
+	 	
+
+</head>
+<body>
+	
+	<div class="formArea">
+		<form name="myForm" method="post" action="">
+			<div class="form-group">
+				<input type="text" name="email" placeholder="Please Inter Email">
+				<div id="err1" class="error"></div>
+			</div>
+			<button type="button" class="SubmitBtn" onclick="validateForm()">Submit</button>
+		</form>
+	</div>
+	
+	<script>
+		var myForm = document.getElementsByName('myForm')[0];
+
+		function validateForm(){
+
+			var email = document.myForm.email.value;
+
+			if(email == ''){
+				err1.innerHTML = 'Please enter email';
+			}
+			else{
+				myForm.submit();
+			}
+		}
+	</script> 
+	 
+	 
+</body>
